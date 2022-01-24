@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)InAid.vcxitems">
+      <Filter>_stuff</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)InAid.vcxitems.filters">
+      <Filter>_stuff</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt">
+      <Filter>_stuff</Filter>
+    </Text>
+    <Text Include="$(MSBuildThisFileDirectory)library.properties">
+      <Filter>_stuff</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="InAid">
+      <UniqueIdentifier>{6c24a2b6-3ef0-4e17-ba71-fc38c36fbf97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_stuff">
+      <UniqueIdentifier>{6528a9e5-4141-4f90-9f28-7b7e0f6abefe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MACHINE">
+      <UniqueIdentifier>{50b9bfd9-7ee1-4b6e-980a-4adee9681371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Button">
+      <UniqueIdentifier>{a01fb62c-4b45-4fd9-9719-f4200a135065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Encoder">
+      <UniqueIdentifier>{7eeca3f0-c563-4c4e-b0cc-476499b9ac7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HardInput">
+      <UniqueIdentifier>{623258d2-76f4-4e4e-94ee-c863f01ff1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InAid\_AIDKIT">
+      <UniqueIdentifier>{53b0a636-112e-4beb-8622-69d9c9418d92}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\InAid.h">
+      <Filter>InAid</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Button.h">
+      <Filter>Button</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\HardInput.h">
+      <Filter>HardInput</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Enums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\AIDKIT.h">
+      <Filter>InAid\_AIDKIT</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\InAid.cpp">
+      <Filter>InAid</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Button.cpp">
+      <Filter>Button</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\HardInput.cpp">
+      <Filter>HardInput</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\enums.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\AIDKIT.cpp">
+      <Filter>InAid\_AIDKIT</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

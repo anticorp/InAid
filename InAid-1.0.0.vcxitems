@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{4a45bb8e-1d07-4a39-a094-38916df12a2e}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\InAid.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\AIDKIT.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Button.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\enums.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\_AIDKIT\HardInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\InAid.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\AIDKIT.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Button.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\Enums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\_AIDKIT\HardInput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)cpp.hint" />
+    <None Include="$(MSBuildThisFileDirectory)InAid.vcxitems" />
+    <None Include="$(MSBuildThisFileDirectory)InAid.vcxitems.filters" />
+  </ItemGroup>
+</Project>
