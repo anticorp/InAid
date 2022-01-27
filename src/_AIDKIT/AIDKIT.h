@@ -9,7 +9,7 @@
 
 #include <ClockCache.h>
 #include "HardInput.h"
-#include <LoopCounter.h>
+#include <LoopTools.h>
 
 namespace inaid
 {
@@ -32,10 +32,9 @@ namespace inaid
 			static bool mConfigured;
 			static const size_t MaxHardInputs = HARDINPUT_STACK_SIZE_MAX;
 			static HARDINPUT* mHardInput[MaxHardInputs];
-			static LOOPCOUNTER mLoopCounter;
 			static uint8_t RegisteredHardInputs;
 			static uint8_t StackIterator;
-				/* # of Loops */
+			static LOOPCOUNTER mLoopCount;
 		};
 
 	}

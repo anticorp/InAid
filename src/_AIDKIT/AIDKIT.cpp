@@ -7,7 +7,7 @@ namespace inaid
 	namespace _
 	{
 		bool INPUTAID::mConfigured = false;
-		LOOPCOUNTER INPUTAID::mLoopCounter;
+		LOOPCOUNTER INPUTAID::mLoopCount;
 		HARDINPUT* INPUTAID::mHardInput[MaxHardInputs];
 		uint8_t INPUTAID::RegisteredHardInputs = 0;
 		uint8_t INPUTAID::StackIterator = 0;
@@ -20,7 +20,7 @@ namespace inaid
 		{
 			if (!mConfigured)
 			{
-				mLoopCounter.Configure(COUNTMETHOD::PeriodReset, RefreshRate);
+				//mLoopCounter.Configure(COUNTMETHOD::PeriodReset, RefreshRate);
 				mConfigured = true;
 				RegisteredHardInputs = 0;
 				StackIterator = 0;
@@ -47,7 +47,7 @@ namespace inaid
 		{
 			if (mConfigured)
 			{
-				if (mLoopCounter.Advance())
+				if (mLoopCount.Advance())
 				{
 					uint8_t NextIterator = (StackIterator + 1) % (RegisteredHardInputs);
 					if (mHardInput[StackIterator]->Active())
@@ -62,7 +62,7 @@ namespace inaid
 		{
 			if (mConfigured)
 			{
-				mLoopCounter.SetResetPeriod(refreshRate);
+				mLoopCount.SetResetPeriod(refreshRate);
 			}
 		}
 		bool INPUTAID::Register(HARDINPUT* _hardInput)
